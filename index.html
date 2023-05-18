@@ -8,7 +8,60 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Calcola il prezzo del tuo biglietto</h2>
+        <form action="">
+            <div class="row">
+                <div class="col-33">
+                    <p>Nome e Cognome</p>
+                    <input type="text" name="nome" id="nome" placeholder="Scrivi il tuo Nome e Cognome" minlength="5" required>
+                </div>
+                <div class="col-33">
+                    <p>Km da percorrere</p>
+                    <input type="text" name="distanza" id="distanza" placeholder="Scrivi i km da percorrere" required>
+                </div>
+                <div class="col-33">
+                    <p>Fascia d'età</p>
+                    <select name="eta" id="eta" required> 
+                        <option value="none" selected hidden>Scegli fascia</option>
+                        <option value="minorenne">Minorenne</option>
+                        <option value="over65">Over65</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <button type="button" id="submitButton">Genera</button>
+                    <button type="reset" id="resetButton">Annulla</button>
+                </div>
+            </div>
+        </form>
+        <h2>Il tuo biglietto</h2>
+        <div class="row" id="biglietto">
+            <h3>dettaglio passeggeri</h3>
+            <div class="col bg-gray">
+                <h3>NOME PASSEGGERO</h3>
+                <div id="nome-biglietto">
+                </div>
+            </div>
+            <div class="col">
+                <h4>Offerta</h4>
+                <div id="tipo-offerta"></div>
+            </div>
+            <div class="col">
+                <h4>Carrozza</h4>
+                <div id="n-carrozza"></div>
+            </div>
+            <div class="col">
+                <h4>Codice CP</h4>
+                <div id="codice-cp"></div>
+            </div>
+            <div class="col">
+                <h4>Costo biglietto</h4>
+                <div id="costo-biglietto"></div>
+            </div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
