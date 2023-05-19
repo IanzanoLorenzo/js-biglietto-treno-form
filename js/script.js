@@ -1,6 +1,8 @@
-const submitButton = document.getElementById('submitButton');
+"use strict";
 
-let nome, km, anni, prezzo, nCarrozza, codiceCp;
+const submitButton = document.getElementById('submitButton');
+const resetButton = document.getElementById('resetButton')
+let nome, km, anni, prezzo,tipoOfferta, nCarrozza, codiceCp;
 
 submitButton.addEventListener('click', function(){
     nome = document.getElementById('nome').value;
@@ -51,5 +53,18 @@ submitButton.addEventListener('click', function(){
     document.getElementById('codice-cp').innerHTML = codiceCp;
 
     document.getElementById('costo-biglietto').innerHTML = prezzo.toFixed(2) + '&euro;';
+}
+)
+
+resetButton.addEventListener('click', function(){
+    document.getElementById('nome-biglietto').innerHTML = '';
+
+    document.getElementById('tipo-offerta').innerHTML = '';
+
+    document.getElementById('n-carrozza').innerHTML = '';
+
+    document.getElementById('codice-cp').innerHTML = '';
+
+    document.getElementById('costo-biglietto').innerHTML = '';
 }
 )
