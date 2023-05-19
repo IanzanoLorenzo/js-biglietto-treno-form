@@ -51,7 +51,5 @@ submitButton.addEventListener('click', function(){
     document.getElementById('codice-cp').innerHTML = codiceCp;
 
     document.getElementById('costo-biglietto').innerHTML = prezzo.toFixed(2) + '&euro;';
-
-    console.log(nome, km, anni, prezzo, nCarrozza, codiceCp, hiding, hiding2)
 }
 )
